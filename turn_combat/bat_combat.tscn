@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1et2vfivr1vq"]
+
+[ext_resource type="PackedScene" uid="uid://20vi6fdre0wt" path="res://bat.tscn" id="1_xo42q"]
+[ext_resource type="Texture2D" uid="uid://cf51iyih5wdee" path="res://turn_combat/cursor_finger.png" id="2_b0qt4"]
+
+[node name="bat_combat" type="CharacterBody2D"]
+
+[node name="Bat" parent="." instance=ExtResource("1_xo42q")]
+script = null
+
+[node name="stats" parent="Bat" index="3"]
+script = null
+
+[node name="ProgressBar" type="ProgressBar" parent="Bat"]
+offset_left = -9.0
+offset_top = -32.0
+offset_right = 91.0
+offset_bottom = -5.0
+scale = Vector2(0.185, 0.185)
+value = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-17, -13)
+scale = Vector2(0.115625, 0.115625)
+texture = ExtResource("2_b0qt4")
+
+[editable path="Bat"]
+[editable path="Bat/Hurtbox"]

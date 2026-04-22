@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bndpv2o6jwll7"]
+
+[ext_resource type="PackedScene" uid="uid://bhnskh1bwe31w" path="res://turn_combat/enemy_group.tscn" id="1_j1gwc"]
+[ext_resource type="Texture2D" uid="uid://dj2v1b6fhtxsm" path="res://ChatGPT Image Aug 4, 2025, 06_58_37 PM.png" id="2_2pgah"]
+[ext_resource type="PackedScene" uid="uid://clfqjifffttip" path="res://turn_combat/player_group.tscn" id="3_2pgah"]
+
+[node name="TurnCombat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="EnemyGroup" parent="." instance=ExtResource("1_j1gwc")]
+position = Vector2(74, 53)
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 1597.0
+offset_bottom = 1017.0
+scale = Vector2(0.2, 0.177639)
+texture = ExtResource("2_2pgah")
+
+[node name="player_group" parent="." instance=ExtResource("3_2pgah")]
+position = Vector2(233, 49)
+
+[node name="choice" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 124.0
+offset_right = 346.0
+offset_bottom = 225.0
+scale = Vector2(0.495221, 0.495221)
+
+[node name="Attack" type="Button" parent="choice"]
+layout_mode = 2
+text = "Attack"
+
+[node name="Defend" type="Button" parent="choice"]
+layout_mode = 2
+disabled = true
+text = "Defend"
+
+[node name="Run" type="Button" parent="choice"]
+layout_mode = 2
+disabled = true
+text = "Run"

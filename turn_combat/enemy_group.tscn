@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhnskh1bwe31w"]
+
+[ext_resource type="Script" uid="uid://5ia0oq4upkg5" path="res://turn_combat/enemy_group.gd" id="1_coydw"]
+[ext_resource type="PackedScene" uid="uid://b1et2vfivr1vq" path="res://turn_combat/bat_combat.tscn" id="2_1tkxt"]
+
+[node name="EnemyGroup" type="Node2D"]
+script = ExtResource("1_coydw")
+
+[node name="bat_combat" parent="." instance=ExtResource("2_1tkxt")]
+position = Vector2(0, 1)
+
+[node name="bat_combat2" parent="." instance=ExtResource("2_1tkxt")]
+position = Vector2(0, 1)
+
+[node name="bat_combat3" parent="." instance=ExtResource("2_1tkxt")]
+
+[node name="bat_combat4" parent="." instance=ExtResource("2_1tkxt")]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://clfqjifffttip"]
+
+[ext_resource type="Script" uid="uid://cm57da7n1n1qp" path="res://turn_combat/player_group.gd" id="1_32bjf"]
+[ext_resource type="PackedScene" uid="uid://ba7hfd6spi55s" path="res://turn_combat/player_combat.tscn" id="2_3lsdw"]
+
+[node name="player_group" type="Node2D"]
+script = ExtResource("1_32bjf")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_3lsdw")]
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_3lsdw")]
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("2_3lsdw")]
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("2_3lsdw")]
+
+[editable path="CharacterBody2D"]
+[editable path="CharacterBody2D/Player"]
+[editable path="CharacterBody2D/Player/HitboxPivot/SwordHitbox"]
+[editable path="CharacterBody2D2"]
+[editable path="CharacterBody2D2/Player"]
+[editable path="CharacterBody2D2/Player/HitboxPivot/SwordHitbox"]
+[editable path="CharacterBody2D3"]
+[editable path="CharacterBody2D3/Player"]
+[editable path="CharacterBody2D3/Player/HitboxPivot/SwordHitbox"]
+[editable path="CharacterBody2D4"]
+[editable path="CharacterBody2D4/Player"]
+[editable path="CharacterBody2D4/Player/HitboxPivot/SwordHitbox"]

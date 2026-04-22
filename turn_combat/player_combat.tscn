@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7hfd6spi55s"]
+
+[ext_resource type="PackedScene" uid="uid://k3pkc5v83wxh" path="res://Player.tscn" id="1_vxqec"]
+[ext_resource type="Texture2D" uid="uid://cf51iyih5wdee" path="res://turn_combat/cursor_finger.png" id="2_6nyx4"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -9.0
+offset_top = -26.0
+offset_right = 83.0
+offset_bottom = 0.999998
+scale = Vector2(0.195, 0.195)
+value = 100.0
+
+[node name="focus" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-19, -6)
+scale = Vector2(0.1125, 0.1125)
+texture = ExtResource("2_6nyx4")
+
+[node name="Player" parent="." instance=ExtResource("1_vxqec")]
+position = Vector2(0, 0)
+script = null
+
+[node name="SwordHitbox" parent="Player/HitboxPivot" index="0"]
+script = null
+
+[editable path="Player"]
+[editable path="Player/HitboxPivot/SwordHitbox"]
